@@ -14,10 +14,12 @@ startButton.addEventListener("click",
         // condizioni affinchè vinca un numero piùttosto che un'altro
         
         if(userCasualNumber > PcCasualNumber){
-            let resultsView = document.getElementById("results-view").innerHTML = `Congratulazioni hai vinto!`
+            let nameUser = document.getElementById("name");
+            let resultsView = document.getElementById("results-view").innerHTML = `Congratulazioni ${nameUser.value} hai vinto!`
         }else{
             let resultsView = document.getElementById("results-view").innerHTML = `Ops! Hai perso!`
         }
     }
-)
-
+    )
+    let nameUser = document.getElementById("name");
+    nameUser.value = "";
